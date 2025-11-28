@@ -1,7 +1,7 @@
 # Modern Photobooth Application
 
 A beautiful, modern web-based photobooth application that captures photos and automatically creates vertical photo strip collages. Built with HTML, CSS, and JavaScript using the Webcam API.
-
+TRY IT HERE:https://nourroun02.github.io/photo_booth/
 ## Features
 
 ✨ **Modern Design**

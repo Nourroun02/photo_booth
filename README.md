@@ -81,23 +81,6 @@ php -S localhost:8000
    - Click "Save" to download your photo strip as a PNG image
    - Click "Retake" to start over and capture new photos
 
-## Design Recommendations
-
-### Color Palette
-
-The application uses a modern gradient color scheme:
-- **Primary Gradient**: Purple to Indigo (`#6366f1` → `#764ba2`)
-- **Background**: Gradient from soft purple to deep purple
-- **Surface**: White with 95% opacity for a glassmorphic effect
-- **Success**: Emerald green (`#10b981`) for save button
-- **Shadows**: Soft, layered shadows for depth
-
-### Typography
-
-- **Font Family**: Inter (Google Fonts)
-- **Weights**: 300-700 (Light to Bold)
-- **Headings**: 32px with gradient text effect
-- **Body**: 16px with secondary color for less important text
 
 
 ## File Structure

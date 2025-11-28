@@ -161,11 +161,3 @@ The application generates a vertical photo strip similar to traditional photoboo
 
 This project is open source and available for personal and commercial use.
 
-## Support
-
-If you encounter any issues or have questions, please check the troubleshooting section above or review the browser console for error messages.
-
----
-
-**Enjoy your modern photobooth experience! 📸✨**
-

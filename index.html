@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Rubik+Vinyl&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Screen -->
+        <div id="mainScreen" class="screen active">
+            <div class="header">
+                <h1 class="title">Vintage Photobooth</h1>
+                <p class="subtitle">Capture memories from a bygone era</p>
+            </div>
+            
+            <div class="camera-preview-container">
+                <div class="film-strip-top"></div>
+                <div class="camera-frame">
+                    <video id="videoPreview" autoplay playsinline></video>
+                    <div id="flashEffect" class="flash-effect hidden"></div>
+                </div>
+                <div class="film-strip-bottom"></div>
+                <canvas id="captureCanvas" style="display: none;"></canvas>
+            </div>
+            
+            <div class="progress-indicator">
+                <div class="progress-dots">
+                    <span class="dot" id="dot1"></span>
+                    <span class="dot" id="dot2"></span>
+                    <span class="dot" id="dot3"></span>
+                    <span class="dot" id="dot4"></span>
+                </div>
+                <p class="progress-text">Photo <span id="currentPhoto">0</span> of 4</p>
+            </div>
+            
+            <button id="takePhotoBtn" class="take-photo-btn">
+                <span class="btn-icon">📸</span>
+                <span class="btn-text">Take Photo</span>
+            </button>
+            
+            <div id="countdown" class="countdown hidden">
+                <div class="countdown-circle">
+                    <span id="countdownNumber">3</span>
+                </div>
+            </div>
+            <div class="retro-decoration-top"></div>
+            <div class="retro-decoration-bottom"></div>
+        </div>
+        
+        <!-- Collage Screen -->
+        <div id="collageScreen" class="screen hidden">
+            <div class="header">
+                <h2 class="title">Your Photo Strip</h2>
+            </div>
+            
+            <div class="collage-container">
+                <canvas id="collageCanvas"></canvas>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="retakeBtn" class="action-btn retake-btn">
+                    <span class="btn-icon">🔄</span>
+                    <span>Retake</span>
+                </button>
+                <button id="saveBtn" class="action-btn save-btn">
+                    <span class="btn-icon">💾</span>
+                    <span>Save</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay hidden">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+        
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden">
+            <p id="errorText"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

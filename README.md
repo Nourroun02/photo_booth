@@ -68,23 +68,7 @@ php -S localhost:8000
 2. Right-click on `index.html`
 3. Select "Open with Live Server"
 
-### Option 3: GitHub Pages / Netlify / Vercel
 
-For a production deployment:
-- Upload all files to GitHub Pages, Netlify, or Vercel
-- The Webcam API works over HTTPS, so these platforms are perfect
-
-## Browser Requirements
-
-- **Chrome/Edge**: ✅ Full support
-- **Firefox**: ✅ Full support
-- **Safari**: ✅ Full support (may require HTTPS)
-- **Mobile browsers**: ✅ Full support
-
-**Note**: The Webcam API requires:
-- HTTPS connection (or localhost)
-- User permission to access camera
-- Modern browser with WebRTC support
 
 ## Usage Instructions
 
@@ -115,19 +99,6 @@ The application uses a modern gradient color scheme:
 - **Headings**: 32px with gradient text effect
 - **Body**: 16px with secondary color for less important text
 
-### UI Elements
-
-- **Border Radius**: 16-24px for major containers, 12px for buttons
-- **Spacing**: Generous padding (24-32px) for comfortable touch targets
-- **Animations**: Smooth transitions (0.3s ease) for all interactions
-- **Shadows**: Layered shadows (sm, md, lg) for depth hierarchy
-
-### Layout Principles
-
-- **Centered Layout**: Maximum width of 500px for optimal viewing
-- **Aspect Ratios**: 3:4 for photo preview (standard portrait)
-- **Progressive Disclosure**: Hide/show screens based on state
-- **Feedback**: Visual feedback for all user actions
 
 ## File Structure
 
@@ -150,12 +121,6 @@ photobooth/
 - Uses HTML5 Canvas for photo capture and collage generation
 - Mirrors the video preview for natural selfie experience
 - Generates high-quality JPEG images (90% quality)
-
-### Collage Algorithm
-- Each photo is 600x450px in the collage
-- 20px white borders around the entire strip
-- 10px spacing between photos
-- Smart cropping to maintain aspect ratios while filling frames
 
 ## Customization
 
@@ -195,12 +160,6 @@ In `style.css`, modify the CSS variables:
 3. **Check Browser**: Use a modern browser (Chrome, Firefox, Safari, Edge)
 4. **Check Camera**: Ensure no other app is using the camera
 
-### Photos Not Saving
-
-1. **Check Browser Downloads**: Some browsers block automatic downloads
-2. **Check Permissions**: Ensure browser allows file downloads
-3. **Try Right-Click**: Right-click on the collage and "Save Image As"
-
 ### Countdown Not Showing
 
 - The countdown appears centered on screen
@@ -214,17 +173,6 @@ The application generates a vertical photo strip similar to traditional photoboo
 - Clean white borders
 - Professional shadow effect
 - PNG format for high quality
-
-## Future Enhancements
-
-Potential features to add:
-- [ ] Filters and effects
-- [ ] Custom borders and frames
-- [ ] Social media sharing
-- [ ] Print options
-- [ ] Customizable layouts (2x2, 3x1, etc.)
-- [ ] Animated GIF creation
-- [ ] QR code for easy download
 
 ## License
 

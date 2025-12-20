@@ -8,7 +8,7 @@
 
 **✨ A beautiful, modern web-based photobooth application that captures photos and automatically creates vertical photo strip collages ✨**
 
-🚀 **[TRY IT LIVE]()**
+🚀 **[TRY IT LIVE](https://nourroun02.github.io/photo_booth/)**
 
 </div>
 

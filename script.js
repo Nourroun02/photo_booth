@@ -109,27 +109,45 @@ async function handleTakePhoto() {
  */
 function playCountdown() {
     return new Promise((resolve) => {
+        // Clear any existing countdown
+        if (window.countdownInterval) {
+            clearInterval(window.countdownInterval);
+        }
+        
         countdown.classList.remove('hidden');
+        
         let count = 3;
         
+        // Set initial display
+        countdownNumber.textContent = count;
+        
+        // Reset animations to starting state
+        const circle = countdown.querySelector('.countdown-circle');
+        circle.style.animation = 'none';
+        countdownNumber.style.animation = 'none';
+        void circle.offsetWidth; // Force reflow
+        circle.style.animation = 'countdownSpin 0.6s ease';
+        countdownNumber.style.animation = 'countdownPulse 0.6s ease';
+        
         const countdownInterval = setInterval(() => {
+            count--; // Decrement first
+            
             if (count > 0) {
                 countdownNumber.textContent = count;
-                const circle = countdown.querySelector('.countdown-circle');
-                circle.style.animation = 'none';
-                countdownNumber.style.animation = 'none';
-                // Force reflow
-                void countdownNumber.offsetWidth;
-                void circle.offsetWidth;
+                
+                // Restart animations
                 circle.style.animation = 'countdownSpin 0.6s ease';
                 countdownNumber.style.animation = 'countdownPulse 0.6s ease';
-                count--;
             } else {
                 clearInterval(countdownInterval);
                 countdown.classList.add('hidden');
+                window.countdownInterval = null; // Clear reference
                 resolve();
             }
-        }, 600); // Faster timer - changed from 1000ms to 600ms
+        }, 600);
+        
+        // Store interval reference globally to prevent multiple countdowns
+        window.countdownInterval = countdownInterval;
     });
 }
 
@@ -366,3 +384,4 @@ window.addEventListener('beforeunload', () => {
         appState.stream.getTracks().forEach(track => track.stop());
     }
 });
+
